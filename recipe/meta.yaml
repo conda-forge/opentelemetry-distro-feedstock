@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-distro" %}
-{% set version = "0.36b0" %}
+{% set version = "0.37b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_distro-{{ version }}.tar.gz
-  sha256: df8cb0b4428079c2391681504772ae4e79580ffecec4470b49ff9f28e1490304
+  sha256: 9eecc4eceea0220ba880539a06d50bac49ac3c4dc65ed8896d2dc695513cbdea
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ test:
 about:
   home: https://pypi.org/project/opentelemetry-distro/
   summary: OpenTelemetry Python Distro
-  license: 'Apache-2.0'
+  license: Apache-2.0
   license_file: LICENSE
 
 extra:
