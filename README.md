@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@goatmale](https://github.com/goatmale/)
+* [@rxm7706](https://github.com/rxm7706/)
 
