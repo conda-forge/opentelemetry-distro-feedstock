@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-distro" %}
-{% set version = "0.46b0" %}
+{% set version = "0.47b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_distro-{{ version }}.tar.gz
-  sha256: 9bfc8a13f1bff2f1e88c3c75bdda8a6241db9c75d4adddb8709cf82b0390f363
+  sha256: 715615724bd5c528a2433c0caeb373e4581f8dc7b4bc270179407a1cca0ad99e
 
 build:
   noarch: python
