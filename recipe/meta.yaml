@@ -1,26 +1,26 @@
 {% set name = "opentelemetry-distro" %}
-{% set version = "0.48b0" %}
+{% set version = "0.49b2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_distro-{{ version }}.tar.gz
-  sha256: 5cb15915780ac4972583286a56683d43bd4ca95371d72f5f3f179c8b0b2ddc91
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_distro-{{ version }}.tar.gz
+  sha256: ce9961bc6df0937c6157642c9e1212caeec9049161523f43fafadc1e4191c8e9
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - opentelemetry-api >=1.12,<2.dev0
     - opentelemetry-instrumentation =={{ version }}
     - opentelemetry-sdk >=1.13,<2.dev0
@@ -31,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
