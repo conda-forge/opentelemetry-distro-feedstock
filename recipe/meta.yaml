@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-distro" %}
-{% set version = "0.54b0" %}
+{% set version = "0.54b1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_distro-{{ version }}.tar.gz
-  sha256: e486fc196a1a2514720a13762566cea8566a9243fdf91ed8539c5f1a7af5a42a
+  sha256: 61d6b97bb7a245fddbb829345bb4ad18be39eb52f770fab89a127107fca3149f
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.54b0
+    - opentelemetry-instrumentation ==0.54b1
     - opentelemetry-sdk ~=1.13
     # - opentelemetry-exporter-otlp ==1.30.0
     # - opentelemetry-exporter-otlp ==1.31.0
@@ -30,6 +30,7 @@ requirements:
     # - opentelemetry-exporter-otlp ==1.32.0
     # - opentelemetry-exporter-otlp ==1.32.1
     # - opentelemetry-exporter-otlp ==1.33.0
+    # - opentelemetry-exporter-otlp ==1.33.1
 
 test:
   imports:
